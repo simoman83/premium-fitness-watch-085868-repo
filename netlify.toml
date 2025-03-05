@@ -1,0 +1,18 @@
+
+# Netlify configuration file
+
+[build]
+  publish = "/"
+  
+# Handle form submission
+[[redirects]]
+  from = "/submit-form"
+  to = "/thank-you.html"
+  status = 303
+  force = true
+
+# Fallback for SPA routing if needed
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
